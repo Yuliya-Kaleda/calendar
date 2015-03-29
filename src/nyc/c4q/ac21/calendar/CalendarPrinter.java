@@ -44,7 +44,7 @@ public class CalendarPrinter
                 System.out.print(current);
                 DateTools.getNextDay(date);
             } else if (firstDayOfWeek == 1) {
-                
+
             }
         }
     }

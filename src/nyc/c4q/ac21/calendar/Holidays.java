@@ -23,7 +23,11 @@ public class Holidays {
 
         HashMap<Calendar, String> holidays = new HashMap<Calendar, String>();
         for (String line : lines) {
-            // FIXME: Write this.
+            if (line.endsWith(holidayType)) {
+                String[] holidayLine = line.split(",");
+                holidays.put(DateTools.parseDate(holidayLine[0]), holidayLine[1]);
+            }
+
             // Use DateTools.parseDate.
         }
         return holidays;
