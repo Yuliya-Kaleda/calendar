@@ -26,7 +26,7 @@ public class Main {
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
-
+        System.out.println("Work day? " + workDays.get(date.get(Calendar.DAY_OF_WEEK)));
 
         // 3. Show whether this is a national holiday, and if so, which.
         HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
