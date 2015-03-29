@@ -36,16 +36,19 @@ public class CalendarPrinter
         // sets cal to first day of month and find which weekday that is
         date.set(Calendar.DAY_OF_MONTH, 1);
         int firstDayOfWeek = date.get(Calendar.DAY_OF_WEEK);
+        int position = 7 - firstDayOfWeek;
 
-        for (int i=1; i<=daysInMonth; i++) {
+        for (int i=0; i<position; i++) {
+            System.out.print("    ");
+
+        }
+
+        for (int j=1; j<=daysInMonth; j++) {
             int current = date.get(Calendar.DATE);
 
-            if (firstDayOfWeek == 0) {
-                System.out.print(current);
-                DateTools.getNextDay(date);
-            } else if (firstDayOfWeek == 1) {
-
-            }
+            if (current == today)
+                System.out.print(current + "* ");
+            System.out.print(current + "  ");
         }
     }
 }
