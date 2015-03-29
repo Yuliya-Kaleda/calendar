@@ -14,13 +14,13 @@ public class WorkDays {
      */
     public static HashMap<Integer, Boolean> getWorkDays() {
         HashMap <Integer, Boolean> workDays = new HashMap<Integer, Boolean>();
-        workDays.put(0, false);
-        workDays.put(1, true);
-        workDays.put(2, true);
-        workDays.put(3, true);
-        workDays.put(4, true);
-        workDays.put(5, true);
-        workDays.put(6, false);
+        workDays.put(Calendar.SUNDAY, false);
+        workDays.put(Calendar.MONDAY, true);
+        workDays.put(Calendar.TUESDAY, true);
+        workDays.put(Calendar.WEDNESDAY, true);
+        workDays.put(Calendar.THURSDAY, true);
+        workDays.put(Calendar.FRIDAY, true);
+        workDays.put(Calendar.SATURDAY, false);
         return workDays;
     }
 
