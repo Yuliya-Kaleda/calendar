@@ -25,22 +25,28 @@ public class Main {
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
-        // ...
+
 
         // 3. Show whether this is a national holiday, and if so, which.
         HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
+        if (holidays.containsKey(date)) {
+            System.out.println(holidays.get(date));
+        }
+        else {
+            System.out.println("Not a national holiday!");
+        }
         // ...
 
         // 4. Show whether this date is in DST.
-        boolean isDST = DST.isDST(date);
+        //boolean isDST = DST.isDST(date);
         // ...
 
         // 5. Show the zodiac sign.
-        String zodiacSign = Zodiac.getZodiacSign(date);
+//        String zodiacSign = Zodiac.getZodiacSign(date);
         // ...
 
         // 6. Print out the monthly calendar.
-        CalendarPrinter.printMonthCalendar(date);
+//        CalendarPrinter.printMonthCalendar(date);
 
     }
 }
