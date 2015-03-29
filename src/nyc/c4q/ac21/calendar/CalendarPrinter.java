@@ -1,6 +1,7 @@
 package nyc.c4q.ac21.calendar;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class CalendarPrinter
 {
@@ -25,10 +26,26 @@ public class CalendarPrinter
      *   The date containing the month to print.
      */
     public static void printMonthCalendar(Calendar date) {
-        // FIXME: Write this.
-        // Use these methods to help you:
-        //   DateTools.getMonthNames()
-        //   DateTools.getNextDay() to loop through days in the month.
-    }
+        HashMap<Integer, String> getMonth = DateTools.getMonthNames();
+        String month = getMonth.get(date.get(Calendar.MONTH));
+        int daysInMonth = date.getActualMaximum(Calendar.DAY_OF_MONTH);
+        int today = date.get(Calendar.DATE);
 
+        System.out.println(month + " " + date.get(Calendar.YEAR));
+
+        // sets cal to first day of month and find which weekday that is
+        date.set(Calendar.DAY_OF_MONTH, 1);
+        int firstDayOfWeek = date.get(Calendar.DAY_OF_WEEK);
+
+        for (int i=1; i<=daysInMonth; i++) {
+            int current = date.get(Calendar.DATE);
+
+            if (firstDayOfWeek == 0) {
+                System.out.print(current);
+                DateTools.getNextDay(date);
+            } else if (firstDayOfWeek == 1) {
+                
+            }
+        }
+    }
 }
