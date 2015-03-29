@@ -21,7 +21,8 @@ public class Main {
 
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
-        // ...
+        String weekday = dayOfWeekNames.get(date.get(Calendar.DAY_OF_WEEK));
+        System.out.println("Day of week:       " + weekday);
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
@@ -38,15 +39,15 @@ public class Main {
         // ...
 
         // 4. Show whether this date is in DST.
-        //boolean isDST = DST.isDST(date);
-        // ...
+        boolean isDST = DST.isDST(date);
+        System.out.println("Is DST?            " + isDST);
 
         // 5. Show the zodiac sign.
-//        String zodiacSign = Zodiac.getZodiacSign(date);
-        // ...
+        String zodiacSign = Zodiac.getZodiacSign(date);
+        System.out.println("Zodiac sign:      " + zodiacSign);
 
         // 6. Print out the monthly calendar.
-//        CalendarPrinter.printMonthCalendar(date);
-
+        System.out.println();
+        CalendarPrinter.printMonthCalendar(date);
     }
 }
