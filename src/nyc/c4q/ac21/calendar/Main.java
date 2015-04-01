@@ -17,8 +17,6 @@ public class Main {
 
         System.out.println("date:              " + DateTools.formatDate(date));
 
-        // FIXME: Write the rest of this method!
-
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
         String weekday = dayOfWeekNames.get(date.get(Calendar.DAY_OF_WEEK));
@@ -37,8 +35,7 @@ public class Main {
         else {
             System.out.println("national holiday:  -");
         }
-
-
+    
         // 4. Show whether this date is in DST.
         boolean isDST = DST.isDST(date);
         System.out.println("is DST:            " + isDST);
