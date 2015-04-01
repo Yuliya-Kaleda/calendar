@@ -49,8 +49,11 @@ public class CalendarPrinter
             if (current < 10)
                 printDay = " " + current;
 
-            if (current == today)
+            if (current == today) {
                 System.out.print(printDay + "* ");
+                if (currPosition == 7)
+                    System.out.print("\n");
+            }
             else if (currPosition == 7)
                 System.out.print(printDay + "  \n");
             else
