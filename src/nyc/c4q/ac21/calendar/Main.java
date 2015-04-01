@@ -17,8 +17,6 @@ public class Main {
 
         System.out.println("date:              " + DateTools.formatDate(date));
 
-        // FIXME: Write the rest of this method!
-
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
         String weekday = dayOfWeekNames.get(date.get(Calendar.DAY_OF_WEEK));
