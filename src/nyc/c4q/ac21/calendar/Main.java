@@ -35,13 +35,13 @@ public class Main {
             System.out.println("national holiday:  " + holidays.get(date));
         }
         else {
-            System.out.println("-");
+            System.out.println("national holiday:  -");
         }
-        // ...
+    
 
         // 4. Show whether this date is in DST.
         boolean isDST = DST.isDST(date);
-        System.out.println("Is DST?            " + isDST);
+        System.out.println("is DST:            " + isDST);
 
         // 5. Show the zodiac sign.
         String zodiacSign = Zodiac.getZodiacSign(date);
