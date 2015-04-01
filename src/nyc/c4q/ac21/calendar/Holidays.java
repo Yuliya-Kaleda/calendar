@@ -27,10 +27,7 @@ public class Holidays {
                 String[] holidayLine = line.split(",");
                 holidays.put(DateTools.parseDate(holidayLine[0]), holidayLine[1]);
             }
-
-            // Use DateTools.parseDate.
         }
         return holidays;
     }
-
 }
