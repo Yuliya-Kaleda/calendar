@@ -32,10 +32,10 @@ public class Main {
         // 3. Show whether this is a national holiday, and if so, which.
         HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
         if (holidays.containsKey(date)) {
-            System.out.println(holidays.get(date));
+            System.out.println("national holiday:  " + holidays.get(date));
         }
         else {
-            System.out.println("Not a national holiday!");
+            System.out.println("-");
         }
         // ...
 
