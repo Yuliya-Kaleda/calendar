@@ -78,7 +78,20 @@ public class DateTools {
 
     public static HashMap<Integer, String> getMonthNames() {
         // FIXME: Write this.
-        return null;  // Change this!
+        HashMap<Integer, String> months = new HashMap<Integer, String>();
+        months.put(Calendar.JANUARY, "January");
+        months.put(Calendar.FEBRUARY, "February");
+        months.put(Calendar.MARCH, "March");
+        months.put(Calendar.APRIL, "April");
+        months.put(Calendar.MAY, "May");
+        months.put(Calendar.JUNE, "June");
+        months.put(Calendar.JULY, "July");
+        months.put(Calendar.AUGUST, "August");
+        months.put(Calendar.SEPTEMBER, "September");
+        months.put(Calendar.OCTOBER, "October");
+        months.put(Calendar.NOVEMBER, "November");
+        months.put(Calendar.DECEMBER, "December");
+        return months;
     }
 
 }

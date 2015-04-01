@@ -22,29 +22,30 @@ public class Main {
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
         String weekday = dayOfWeekNames.get(date.get(Calendar.DAY_OF_WEEK));
-        System.out.println("Day of week:       " + weekday);
+        System.out.println("day of week:       " + weekday);
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
-
+        boolean workDay = workDays.get(date.get(Calendar.DAY_OF_WEEK));
+        System.out.println("work day:          " + workDay);
 
         // 3. Show whether this is a national holiday, and if so, which.
         HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
         if (holidays.containsKey(date)) {
-            System.out.println(holidays.get(date));
+            System.out.println("national holiday:  " + holidays.get(date));
         }
         else {
-            System.out.println("Not a national holiday!");
+            System.out.println("national holiday:  -");
         }
-        // ...
+
 
         // 4. Show whether this date is in DST.
         boolean isDST = DST.isDST(date);
-        System.out.println("Is DST?            " + isDST);
+        System.out.println("is DST:            " + isDST);
 
         // 5. Show the zodiac sign.
         String zodiacSign = Zodiac.getZodiacSign(date);
-        System.out.println("Zodiac sign:      " + zodiacSign);
+        System.out.println("Zodiac sign:       " + zodiacSign);
 
         // 6. Print out the monthly calendar.
         System.out.println();

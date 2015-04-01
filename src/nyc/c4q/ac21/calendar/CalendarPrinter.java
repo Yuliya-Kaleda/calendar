@@ -28,27 +28,38 @@ public class CalendarPrinter
     public static void printMonthCalendar(Calendar date) {
         HashMap<Integer, String> getMonth = DateTools.getMonthNames();
         String month = getMonth.get(date.get(Calendar.MONTH));
-        int daysInMonth = date.getActualMaximum(Calendar.DAY_OF_MONTH);
+        int dayInMonth = date.getActualMaximum(Calendar.DAY_OF_MONTH);
         int today = date.get(Calendar.DATE);
 
         System.out.println(month + " " + date.get(Calendar.YEAR));
 
         // sets cal to first day of month and find which weekday that is
         date.set(Calendar.DAY_OF_MONTH, 1);
-        int firstDayOfWeek = date.get(Calendar.DAY_OF_WEEK);
-        int position = 7 - firstDayOfWeek;
+        int position = date.get(Calendar.DAY_OF_WEEK);
 
-        for (int i=0; i<position; i++) {
+        for (int i=1; i<position; i++) {
             System.out.print("    ");
-
         }
 
-        for (int j=1; j<=daysInMonth; j++) {
+        for (int j=1; j<=dayInMonth; j++) {
             int current = date.get(Calendar.DATE);
+            int currPosition = date.get(Calendar.DAY_OF_WEEK);
+            String printDay = String.valueOf(current);
 
-            if (current == today)
-                System.out.print(current + "* ");
-            System.out.print(current + "  ");
+            if (current < 10)
+                printDay = " " + current;
+
+            if (current == today) {
+                System.out.print(printDay + "* ");
+                if (currPosition == 7)
+                    System.out.print("\n");
+            }
+            else if (currPosition == 7)
+                System.out.print(printDay + "  \n");
+            else
+                System.out.print(printDay + "  ");
+
+            date.add(Calendar.DATE, 1);
         }
     }
 }
