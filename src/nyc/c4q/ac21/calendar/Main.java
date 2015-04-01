@@ -45,7 +45,7 @@ public class Main {
 
         // 5. Show the zodiac sign.
         String zodiacSign = Zodiac.getZodiacSign(date);
-        System.out.println("Zodiac sign:      " + zodiacSign);
+        System.out.println("Zodiac sign:       " + zodiacSign);
 
         // 6. Print out the monthly calendar.
         System.out.println();
