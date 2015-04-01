@@ -22,11 +22,12 @@ public class Main {
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
         String weekday = dayOfWeekNames.get(date.get(Calendar.DAY_OF_WEEK));
-        System.out.println("Day of week:       " + weekday);
+        System.out.println("day of week:       " + weekday);
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
-        System.out.println("Work day? " + workDays.get(date.get(Calendar.DAY_OF_WEEK)));
+        boolean workDay = workDays.get(date.get(Calendar.DAY_OF_WEEK));
+        System.out.println("work day:          " + workDay);
 
         // 3. Show whether this is a national holiday, and if so, which.
         HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
