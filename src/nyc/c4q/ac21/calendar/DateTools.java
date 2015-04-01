@@ -64,7 +64,7 @@ public class DateTools {
      */
     public static HashMap<Integer, String> getDayOfWeekNames() {
         HashMap<Integer, String> names = new HashMap<Integer, String>();
-        // FIXME: Write this.
+        
         names.put(Calendar.MONDAY, "Monday");
         names.put(Calendar.TUESDAY, "Tuesday");
         names.put(Calendar.WEDNESDAY, "Wednesday");
@@ -77,7 +77,7 @@ public class DateTools {
     }
 
     public static HashMap<Integer, String> getMonthNames() {
-        // FIXME: Write this.
+        
         HashMap<Integer, String> months = new HashMap<Integer, String>();
         months.put(Calendar.JANUARY, "January");
         months.put(Calendar.FEBRUARY, "February");
